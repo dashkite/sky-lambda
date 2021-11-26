@@ -1,0 +1,11 @@
+# Adapted from 
+#   https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-event-structure.html#lambda-event-structure-response-origin
+headers:
+  content-type:
+    # AWS wil fill in the key for us
+    - value: text/html
+status: '200'
+statusDescription: 200 OK
+body:
+  data: "<h1>Hello from Lambda!</h1>"
+  encoding: "text"

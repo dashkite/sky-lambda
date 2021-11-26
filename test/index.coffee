@@ -8,7 +8,7 @@ import edge from "../src/edge"
 import albRequest from "./data/alb-request"
 import albResponse from "./data/alb-response"
 import edgeRequestEvent from "./data/edge-request-event"
-import edgeResponseEvent from "./data/edge-response-event"
+import edgeResponse from "./data/edge-response"
 
 handler = (request) ->
   if request.target == "/lambda?query=1234ABCD" && request.method == "get"
@@ -35,7 +35,10 @@ do ->
 
     test "Edge Adapter", [
 
-      test "basic test"
+      test "basic test", ->
+        f = edge handler
+        f edgeRequestEvent, {}, (error, response) ->
+          assert.deepEqual edgeResponse, response
 
     ]
 
