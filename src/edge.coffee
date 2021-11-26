@@ -1,34 +1,28 @@
 import {
   getRequest
-  getURL
-  getMethod
-  getHeaders
-  setResponseStatusCode
-  setResponseStatusDescription
-  setResponseHeaders
-  setResponseBody
-  setResponseBodyIsBase64Encoded
+  getNormalizedRequest
+  getDenormalizedResponse
 } from "@dashkite/maeve/edge"
 
 lambda = (handler) ->
 
-  ({ event, callback }) ->
+  ( event, context, callback ) ->
 
-    _request = getRequest event
+    console.log "event:", event
 
-    request =
-      url: getURL _request
-      method: getMethod _request
-      headers: getHeaders _request
+    request = getNormalizedRequest event
+
+    console.log "normalized request:", request
 
     response = await handler request
 
-    callback null,
-      statusCode: setResponseStatus response
-      statusDescription: setResponseStatusDescription response
-      headers: setResponseHeaders response
-      body: setResponseBody response
-      isBase64Encoded: setResponseBodyIsBase64Encoded response
+    console.log "normalized response:", response
+
+    response = getDenormalizedResponse response
+
+    console.log "denormalized response:", response
+
+    callback null, response
 
 
 export default lambda

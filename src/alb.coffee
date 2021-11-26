@@ -13,7 +13,7 @@ lambda = (handler) ->
     request = getNormalizedRequest event
 
     response = await handler request
-    
+
     _response = getDenormalizedResponse response
     
     callback null, _response
