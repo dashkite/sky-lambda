@@ -8,7 +8,7 @@ import {
 
 lambda = (handler) ->
 
-  ({ event, callback }) ->
+  (event, context, callback) ->
 
     request = getNormalizedRequest event
 

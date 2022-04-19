@@ -6,6 +6,5 @@ headers:
     - value: text/html
 status: '200'
 statusDescription: 200 OK
-body:
-  data: "<h1>Hello from Lambda!</h1>"
-  encoding: "text"
+body: "<h1>Hello from Lambda!</h1>"
+bodyEncoding: "text"
