@@ -8,7 +8,7 @@ lambda = (handler) ->
 
   ( event, context, callback ) ->
 
-    console.log "event:", event
+    console.log "event:", JSON.stringify event, null, 2
 
     request = getNormalizedRequest event
 
