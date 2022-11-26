@@ -8,14 +8,21 @@ import {
 
 lambda = (handler) ->
 
-  ({ event, callback }) ->
+  ( event, context, callback ) ->
+
+    console.log { event, context, callback }
 
     request = getNormalizedRequest event
 
+    console.log "request", request
+
     response = await handler request
+
+    console.log "response", response
 
     _response = getDenormalizedResponse response
     
+    console.log "denormalized response", _response
     callback null, _response
 
 export default lambda
