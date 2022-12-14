@@ -8,7 +8,7 @@
     }
   },
   "files": [
-    "build/node/srgitc"
+    "build/node/src"
   ],
   "scripts": {
     "test": "genie test"
