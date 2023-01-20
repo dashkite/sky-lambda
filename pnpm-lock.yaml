@@ -2,19 +2,19 @@ lockfileVersion: 5.4
 
 specifiers:
   '@dashkite/amen': ^0.1.2
-  '@dashkite/amen-console': ^0.0.1
+  '@dashkite/amen-console': ^0.0.2
   '@dashkite/assert': ^0.1.4
   '@dashkite/genie': ^0.5.6
-  '@dashkite/genie-presets': ^0.5.4
+  '@dashkite/genie-presets': ^0.5.7
   '@dashkite/joy': ^0.3.16
-  '@dashkite/maeve': file:../maeve
+  '@dashkite/maeve': link:../maeve
 
 dependencies:
-  '@dashkite/maeve': file:../maeve
+  '@dashkite/maeve': link:../maeve
 
 devDependencies:
   '@dashkite/amen': 0.1.2
-  '@dashkite/amen-console': 0.0.1
+  '@dashkite/amen-console': 0.0.2
   '@dashkite/assert': 0.1.4
   '@dashkite/genie': 0.5.11
   '@dashkite/genie-presets': 0.5.7
@@ -1152,8 +1152,10 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@dashkite/amen-console/0.0.1:
-    resolution: {integrity: sha512-ZJ0a1vNxqULnXN5e0vCkHVHnmK8XPaUrzGKF77cpCMqnBmO69D/UwzhAmT0lzHXQJ6zXEdTMfExO9LsQt14FiQ==}
+  /@dashkite/amen-console/0.0.2:
+    resolution: {integrity: sha512-16xkmucNi9enIjXI3Khf54mdvDFG7+QSeB4/Xlh3AGKjPCwSQppV/DTVgaI5mkYcYO3b9v6RGrEGYvaji4ynVw==}
+    dependencies:
+      chalk: 4.1.2
     dev: true
 
   /@dashkite/amen/0.1.2:
@@ -1179,18 +1181,6 @@ packages:
       - bluebird
       - supports-color
     dev: true
-
-  /@dashkite/bake/0.0.6:
-    resolution: {integrity: sha512-yBD2B4l1+nGa4JZ+CgxmhxDGnZvs+SIB8xl/rheINdmbfe1/tXswcwLsrz8qP5x4/9mDFVOq00vKauUCj0cIJA==}
-    dependencies:
-      '@dashkite/base64': 1.0.1
-      '@dashkite/joy': 0.3.16
-      '@dashkite/utf8': 1.0.1
-    dev: false
-
-  /@dashkite/base64/1.0.1:
-    resolution: {integrity: sha512-7O3HajSgWaie/kme1bcdXQnVsMXn4A5m9YOaxWnEZ8z9LCrnJ8BGnpTgFJUqSC4mv0Z/0NBcwTmeGCoEc9VYoA==}
-    dev: false
 
   /@dashkite/genie-presets/0.5.7:
     resolution: {integrity: sha512-VSO0Cwqs47MD+3I13W/St3CXcSxQsXbvAWc+6p1hTBcfjU2mCjyIumk0EYvJftU2FvVXGaojMoAgn4DPJEWufg==}
@@ -1236,6 +1226,7 @@ packages:
 
   /@dashkite/joy/0.3.16:
     resolution: {integrity: sha512-dsU0us4j1Pb+zceoBvLbnZ2PbmULkJUtM2vtWLxKmoc1DE4w9SVTiPTe6JWvF0A0vk90ldv+Lc9qEA5x3O+DtQ==}
+    dev: true
 
   /@dashkite/katana/0.4.8:
     resolution: {integrity: sha512-KOfMS5aRZItxPeMv0OXbOTCj5BZhN9jM190jae8HB7WgGB5uM5jEzRWmyh3yVbxTaL83o7csktRzUkxkr/Op1A==}
@@ -1277,10 +1268,6 @@ packages:
       - supports-color
       - utf-8-validate
     dev: true
-
-  /@dashkite/utf8/1.0.1:
-    resolution: {integrity: sha512-58HZrEijYUG9p8SAf4o/NR7U3qUq//9XbkQ7T5cHIY/RFjCVg9vpWZlHXkcbZp7v3CAMJgEGVXt/5/upvOBQAw==}
-    dev: false
 
   /@dashkite/writeme/0.2.0:
     resolution: {integrity: sha512-bAKlW98jo3H/2K/9UyLxBH2GzHpd7U6OUXNH5dCDCRQlTbC1HlpeswojEGPmTGbM8soR+vStItJ7siSqywqn0A==}
@@ -2885,18 +2872,6 @@ packages:
     engines: {node: 4.x || >=6.0.0}
     dev: true
 
-  /node-fetch/2.6.8:
-    resolution: {integrity: sha512-RZ6dBYuj8dRSfxpUSu+NsdF1dpPpluJxwOp+6IoDp/sH2QNDSvurYsAa+F1WxY2RjA1iP93xhcsUoYbF2XBqVg==}
-    engines: {node: 4.x || >=6.0.0}
-    peerDependencies:
-      encoding: ^0.1.0
-    peerDependenciesMeta:
-      encoding:
-        optional: true
-    dependencies:
-      whatwg-url: 5.0.0
-    dev: false
-
   /node-releases/2.0.8:
     resolution: {integrity: sha512-dFSmB8fFHEH/s81Xi+Y/15DQY6VHW81nXRj86EMSL3lmuTmK1e+aT4wrFCkTbm+gSwkw4KpX+rT/pMM2c1mF+A==}
     dev: true
@@ -3554,6 +3529,7 @@ packages:
   /statuses/2.0.1:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
     engines: {node: '>= 0.8'}
+    dev: true
 
   /string_decoder/1.3.0:
     resolution: {integrity: sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==}
@@ -3679,10 +3655,6 @@ packages:
     resolution: {integrity: sha1-zCAOqyYT9BZtJ/+a/HylbUnfbrQ=}
     dev: true
 
-  /tr46/0.0.3:
-    resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
-    dev: false
-
   /tslib/2.4.1:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
     dev: true
@@ -3785,17 +3757,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /webidl-conversions/3.0.1:
-    resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
-    dev: false
-
-  /whatwg-url/5.0.0:
-    resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
-    dependencies:
-      tr46: 0.0.3
-      webidl-conversions: 3.0.1
-    dev: false
-
   /which/2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
     engines: {node: '>= 8'}
@@ -3849,34 +3810,3 @@ packages:
       buffer-crc32: 0.2.13
       fd-slicer: 1.1.0
     dev: true
-
-  file:../maeve:
-    resolution: {directory: ../maeve, type: directory}
-    name: '@dashkite/maeve'
-    version: 0.0.5
-    dependencies:
-      '@dashkite/bake': 0.0.6
-      '@dashkite/joy': 0.3.16
-      '@dashkite/media-type': file:../media-type
-      node-fetch: 2.6.8
-      statuses: 2.0.1
-    transitivePeerDependencies:
-      - encoding
-    dev: false
-
-  file:../media-type:
-    resolution: {directory: ../media-type, type: directory}
-    name: '@dashkite/media-type'
-    version: 0.0.0
-    dependencies:
-      '@dashkite/joy': 0.3.16
-      '@dashkite/parse': file:../parse
-    dev: false
-
-  file:../parse:
-    resolution: {directory: ../parse, type: directory}
-    name: '@dashkite/parse'
-    version: 0.3.1
-    dependencies:
-      '@dashkite/joy': 0.3.16
-    dev: false
