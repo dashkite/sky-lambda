@@ -16,7 +16,10 @@ lambda = (handler) ->
 
     console.log "request", request
 
-    response = await handler request
+    response = if request.target == "/ping"
+      description: "ok" 
+    else
+      await handler request
 
     console.log "response", response
 
