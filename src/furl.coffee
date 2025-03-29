@@ -14,7 +14,11 @@ lambda = ( handler ) ->
 
     console.log { response }
 
-    Sublime.Response.to "furl", response
+    final = Sublime.Response.to "furl", response
+
+    console.log { final }
+
+    final
 
 
 export default lambda
