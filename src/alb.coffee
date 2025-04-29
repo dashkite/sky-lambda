@@ -3,8 +3,6 @@ import {
   getDenormalizedResponse
 } from "@dashkite/maeve/alb"
 
-# TODO do we want this wrapped in a try-catch?
-# so we can pass the error to the callback?
 
 lambda = (handler) ->
 
