@@ -47,6 +47,6 @@
     "@dashkite/joy": "^0.3.16"
   },
   "dependencies": {
-    "@dashkite/maeve": "link:../maeve"
+    "@dashkite/maeve": "0.1.0"
   }
 }
