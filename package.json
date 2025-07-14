@@ -1,6 +1,6 @@
 {
   "name": "@dashkite/sky-lambda",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Sky API Adapter For Use With AWS Lambda ",
   "exports": {
     "./*": {
